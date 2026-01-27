@@ -8,15 +8,17 @@
 </a>
 </div>
 
+
 # 👩🏻‍💻 Amgauna Tecnologia Projetos Web
-### www.amgauna.com.br
-### Instagram.com/amgaunaprojetos
-### ThReads.com/amgaunaprojetos
-### X.com/amgaunaprojetos
 	
 ### ✨ About me 💕🐶😺🖥️💻📺🎦🎸🍔🍕🌭🧁🍰
 🇧🇷 I am a Brazilian Company, CNPJ MEI. I am working with Web Technology. I am analyzing artificial intelligence LLM app.<br>
-IT Consultant, IT Projects Manager, Web Developer, Digital Marketing, Web Designer, Graphic Designer, Windows Tech Support, etc.
+IT Consultant, IT Projects Manager, Web Developer, Digital Marketing, Web Designer, Graphic Designer, Windows Tech Support, etc. <br>
+- www.amgauna.com.br <br>
+- https://Instagram.com/amgaunaprojetos <br>
+- https://Threads.com/amgaunaprojetos <br>
+- https://X.com/amgaunaprojetos <br>
+
 
 ---
 ### ✨ Self-Taught Study (2015 to present)
@@ -40,6 +42,7 @@ IT Consultant, IT Projects Manager, Web Developer, Digital Marketing, Web Design
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" width="30" height="auto" />  
 </div>
 
+
 ---
 ### 🤖 Artificial Intelligence - LLM Models (2023 to present)
 <div style="display:inline-flex; margin:0; padding:auto; align-items:center; height:100vh;">
@@ -52,6 +55,7 @@ IT Consultant, IT Projects Manager, Web Developer, Digital Marketing, Web Design
 <img src="https://github.com/amgauna/amgauna/blob/main/Image/metaai2.png" width="100" height="auto" /> 
 <img src="https://github.com/amgauna/amgauna/blob/main/Image/grokai1.jpeg" width="70" height="auto" /> 
 </div>
+
 
 ---
 ### 🤖 Artificial Intelligence - Machine Learning Tools (2023 to present)
@@ -66,30 +70,31 @@ IT Consultant, IT Projects Manager, Web Developer, Digital Marketing, Web Design
 <img src="https://github.com/amgauna/amgauna/blob/main/Image/canva2.jpeg" width="80" height="auto" /> 
 </div>	
 
+
 ---
 ### ✨ Github Stats: Total Contributions & Top Languages
 
 <div class="top-center"> 
-<a href="https://github.com/amgauna/github-readme-stats" align="left" />
-<img width="300" height="auto" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?&langs_count=30&username=amgauna&theme=default"  /> 
+<a href="https://github.com/amgauna-tecnologia-projetos/github-readme-stats" align="left" />
+<img width="300" height="auto" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?&langs_count=30&username=amgauna-tecnologia-projetos&theme=default"  /> 
 </a>
-<a href="https://github.com/amgauna/github-readme-stats" align="right" />
-<img width="450" height="auto" src="https://github-readme-streak-stats.herokuapp.com/?user=amgauna&theme=default" /> </a> 
+<a href="https://github.com/amgauna-tecnologia-projetos/github-readme-stats" align="right" />
+<img width="450" height="auto" src="https://github-readme-streak-stats.herokuapp.com/?user=amgauna-tecnologia-projetos&theme=default" /> </a> 
 </div>
 
 <div class="top-left"> 
-<a href="https://github.com/amgauna/github-readme-stats" />
-<img width="380" height="auto" align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=amgauna&layout=compact&langs_count=50&card_width=380&theme=default" /> </a>
+<a href="https://github.com/amgauna-tecnologia-projetos/github-readme-stats" />
+<img width="380" height="auto" align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=amgauna-tecnlogia-projetos&layout=compact&langs_count=50&card_width=380&theme=default" /> </a>
 </div>
 
 <div class="top-right">
-<a href="https://github.com/amgauna/github-readme-stats" />
-<img width="380" height="180" align="top" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?&username=amgauna&langs_count=30&theme=default" /> </a>
+<a href="https://github.com/amgauna-tecnologia-projetos/github-readme-stats" />
+<img width="380" height="180" align="top" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?&username=amgauna-tecnologia-projetos&langs_count=30&theme=default" /> </a>
 </div>
 
 <picture> 
-  <source srcset="https://github-readme-stats.vercel.app/api?username=amgauna&show_icons=true&theme=default" media="(prefers-color-scheme: light)" />
-  <img width="350" height="200" src="https://github-readme-stats.vercel.app/api?username=amgauna&show_icons=true" />
+  <source srcset="https://github-readme-stats.vercel.app/api?username=amgauna-tecnologia-projetos&show_icons=true&theme=default" media="(prefers-color-scheme: light)" />
+  <img width="350" height="200" src="https://github-readme-stats.vercel.app/api?username=amgauna-tecnologia-projetos&show_icons=true" />
 </picture>
 
 
