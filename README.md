@@ -4,7 +4,7 @@
  title="Follow me" alt="Followers" /> 
 </a> 
 <a href="https://github.com/AmgaunaTecnologiaProjetos">
-<img src="https://komarev.com/ghpvc/?username=amgauna&label=Profile%20views&color=0e75b6&style=flat-square&color=yellow&link=https://www.github.com/AmgaunaTecnologiaProjetos/" title="Profile views" alt="Profile views" /> 
+<img src="https://komarev.com/ghpvc/?username=AmgaunaTecnologiaProjetos&label=Profile%20views&color=0e75b6&style=flat-square&color=yellow&link=https://www.github.com/AmgaunaTecnologiaProjetos/" title="Profile views" alt="Profile views" /> 
 </a>
 </div>
 
