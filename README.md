@@ -15,7 +15,7 @@
 🇧🇷 I am a Brazilian Company, CNPJ MEI. I am working with Web Technology. I am analyzing artificial intelligence LLM app.<br>
 IT Consultant, IT Projects Manager, Web Developer, Digital Marketing, Web Designer, Graphic Designer, Windows Tech Support, etc. <br>
 Mailing Address: Rua Voluntarios da Patria nº 305, Zip Code: 22270-003, Neighborhood: Botafogo, City: Rio de Janeiro, State: RJ, Brazil. <br>
-Email: anagauna@amgauna.com.br ,  WhatsApp: +55 (21) 97414-8008 (Business Hours) <br>
+Email: anagauna@amgauna.com.br ,  <a href="https://wa.me/5521974148008">WhatsApp: +55 (21) 97414-8008 (Business Hours)</a> <br>
 
 - https://www.amgauna.com.br <br>
 - https://Instagram.com/amgaunaprojetos <br>
