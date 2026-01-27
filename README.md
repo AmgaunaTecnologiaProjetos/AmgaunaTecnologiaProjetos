@@ -78,20 +78,20 @@ Email: <a href="mailto:anagauna@amgauna.com.br">anagauna@amgauna.com.br</a>, Wha
 
 <div class="top-center"> 
 <a href="https://github.com/AmgaunaTecnologiaProjetos/github-readme-stats" align="left" />
-<img width="300" height="auto" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?&langs_count=30&username=AmgaunaTecnologiaProjetos&theme=default"  /> 
+<img width="300" height="auto" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?&langs_count=25&username=AmgaunaTecnologiaProjetos&theme=default" /> 
 </a>
 <a href="https://github.com/AmgaunaTecnologiaProjetos/github-readme-stats" align="right" />
-<img width="450" height="auto" src="https://github-readme-streak-stats.herokuapp.com/?user=AmgaunaTecnologiaProjetos&theme=default" /> </a> 
+<img width="450" height="auto" src="https://github-readme-streak-stats.vercel.app/?user=AmgaunaTecnologiaProjetos&theme=default" /> </a> 
 </div>
 
 <div class="top-left"> 
 <a href="https://github.com/AmgaunaTecnologiaProjetos/github-readme-stats" />
-<img width="380" height="auto" align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=AmgaunaTecnologiaProjetos&layout=compact&langs_count=50&card_width=380&theme=default" /> </a>
+<img width="380" height="auto" align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=AmgaunaTecnologiaProjetos&layout=compact&langs_count=25&card_width=380&theme=default" /> </a>
 </div>
 
 <div class="top-right">
 <a href="https://github.com/AmgaunaTecnologiaProjetos/github-readme-stats" />
-<img width="380" height="180" align="top" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?&username=AmgaunaTecnologiaProjetos&langs_count=30&theme=default" /> </a>
+<img width="380" height="180" align="top" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?&username=AmgaunaTecnologiaProjetos&langs_count=25&theme=default" /> </a>
 </div>
 
 <picture> 
