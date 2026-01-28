@@ -12,7 +12,9 @@
 # 👩🏻‍💻 Amgauna Tecnologia Projetos Web
 	
 ### ✨ About me 🖥️💻
-🇧🇷  I am a Brazilian Company, CNPJ MEI. I am working with Web Technology. I am studying <b>Prompt Engineering</b> and analyzing <b>LLM</b> app, AI Agents, AI Agentic, AI RAG Agents. I am analyzing <b>AI photo</b> editing apps, <b>AI video</b> editing apps, and <b>AI audio</b> editing apps that generate images using <b>generative artificial intelligence</b> filters. These AI apps need to include information in their <b>Metadata</b> indicating that they were generated using AI. <br>
+🇧🇷  I am a Brazilian Company, CNPJ MEI. I am working with Web Technology in City of Rio de Janeiro, State of Rio de Janeiro, Brazil. <br> 
+
+I am studying <b>Prompt Engineering</b> and analyzing <b>LLM</b> app, AI Agents, AI Agentic, AI RAG Agents. I am analyzing <b>AI photo</b> editing apps, <b>AI video</b> editing apps, and <b>AI audio</b> editing apps that generate images using <b>generative artificial intelligence</b> filters. These AI apps need to include information in their <b>Metadata</b> indicating that they were generated using AI. <br>
 
 I am a <b>Microsoft Partners Cloud</b> partner.  I work with the services of IT Consultant, IT Projects Manager, Web Developer, Digital Marketing, Web Designer, Graphic Designer, Windows Tech Support, etc. <br>
 
