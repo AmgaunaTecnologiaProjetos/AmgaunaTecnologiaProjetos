@@ -56,10 +56,10 @@ Email: <a href="mailto:anagauna@amgauna.com.br">anagauna@amgauna.com.br</a>, Wha
 ---
 ### 🤖 Artificial Intelligence - LLM Models
 <div style="display:inline-flex; margin:0; padding:auto; align-items:center; height:100vh;">
-<img src="https://github.com/amgauna/amgauna/blob/main/Image/gemini3.png" width="190" height="190" /> 
-<img src="https://github.com/amgauna/amgauna/blob/main/Image/deepseek1.png" width="190" height="190" /> 
-<img src="https://github.com/amgauna/amgauna/blob/main/Image/manusai.png" width="190" height="190" /> 
-<img src="https://github.com/amgauna/amgauna/blob/main/Image/metaai2.png" width="190" height="190" /> 
+<img src="https://github.com/amgauna/amgauna/blob/main/Image/gemini3.png" width="100" height="190" /> 
+<img src="https://github.com/amgauna/amgauna/blob/main/Image/deepseek1.png" width="100" height="190" /> 
+<img src="https://github.com/amgauna/amgauna/blob/main/Image/manusai.png" width="100" height="190" /> 
+<img src="https://github.com/amgauna/amgauna/blob/main/Image/metaai2.png" width="100" height="190" /> 
 <img src="https://github.com/amgauna/amgauna/blob/main/Image/claudeai1.png" width="90" height="190" /> 
 <img src="https://github.com/amgauna/amgauna/blob/main/Image/microsoftcopilot1.jpeg" width="70" height="70" /> 
 <img src="https://github.com/amgauna/amgauna/blob/main/Image/chatgpt.png" width="70" height="70" /> 
