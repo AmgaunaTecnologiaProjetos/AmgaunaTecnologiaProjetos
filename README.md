@@ -24,6 +24,7 @@ Email: <a href="mailto:anagauna@amgauna.com.br">anagauna@amgauna.com.br</a>, Wha
 - https://Instagram.com/amgaunaprojetos <br>
 - https://Threads.com/amgaunaprojetos <br>
 - https://X.com/amgaunaprojetos <br>
+- https://amgauna-tecnologia.blogspot.com <br>
 
 
 ---
