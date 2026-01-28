@@ -18,7 +18,7 @@ I am studying <b>Prompt Engineering</b> and analyzing <b>LLM</b> app, AI Agents,
 
 I am a <b>Microsoft Partners Cloud</b> partner.  I work with the services of IT Consultant, IT Projects Manager, Web Developer, Digital Marketing, Web Designer, Graphic Designer, Windows Tech Support, etc. <br>
 
-Correspondence - A/C: <b>Ana M Gauna</b>, Mailing Address: Rua Voluntarios da Patria nº 305/202, Bloco 1, Zip Code: 22270-003, Neighborhood: Botafogo, City: Rio de Janeiro, State: RJ, Brazil. <br>
+Mail Delivery - A/C: <b>Ana M Gauna</b>, Address: Rua Voluntarios da Patria nº 305/202, Bloco 1, Zip Code: 22270-003, Neighborhood: Botafogo, City: Rio de Janeiro, State: RJ, Brazil. <br>
 
 Email: <a href="mailto:anagauna@amgauna.com.br">anagauna@amgauna.com.br</a>, WhatsApp: <a href="https://wa.me/5521974148008">+55 (21) 97414-8008</a> (Business Hours) <br>
 
