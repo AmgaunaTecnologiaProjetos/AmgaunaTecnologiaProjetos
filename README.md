@@ -89,7 +89,7 @@ Email: <a href="mailto:anagauna@amgauna.com.br">anagauna@amgauna.com.br</a>, Wha
 <img width="300" height="auto" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?&langs_count=25&username=AmgaunaTecnologiaProjetos&theme=default" /> 
 </a>
 <a href="https://github.com/AmgaunaTecnologiaProjetos/github-readme-stats" align="right" />
-<img width="450" height="auto" src="https://github-readme-streak-stats.vercel.app/?user=AmgaunaTecnologiaProjetos&theme=default" /> </a> 
+<img width="450" height="auto" src="https://github-readme-streak-stats.herokuapp.com/?user=AmgaunaTecnologiaProjetos&theme=default" /> </a> 
 </div>
 
 <div class="top-left"> 
