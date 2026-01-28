@@ -75,9 +75,9 @@ Email: <a href="mailto:anagauna@amgauna.com.br">anagauna@amgauna.com.br</a>, Wha
 <img src="https://github.com/amgauna/amgauna/blob/main/Image/googleaistudio3.jpeg" width="150" height="250" /> 
 <img src="https://github.com/amgauna/amgauna/blob/main/Image/googlenanobananapro.jpeg" width="150" height="250" /> 
 <img src="https://github.com/amgauna/amgauna/blob/main/Image/googleveo3.png" width="80" height="250" /> 
-<img src="https://github.com/amgauna/amgauna/blob/main/Image/notebooklm2.png" width="150" height="250" /> 
+<img src="https://github.com/amgauna/amgauna/blob/main/Image/notebooklm2.png" width="80" height="250" /> 
 <br>
-<img src="https://github.com/amgauna/amgauna/blob/main/Image/microsoftdesigner1.png" width="150" height="250" /> 
+<img src="https://github.com/amgauna/amgauna/blob/main/Image/microsoftdesigner1.png" width="80" height="250" /> 
 <img src="https://github.com/amgauna/amgauna/blob/main/Image/openaisora2.png" width="100" height="100" /> 
 <img src="https://github.com/amgauna/amgauna/blob/main/Image/capcut1.jpeg" width="70" height="70" /> 
 <img src="https://github.com/amgauna/amgauna/blob/main/Image/canva2.jpeg" width="70" height="70" /> 
