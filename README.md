@@ -95,20 +95,20 @@ Email: <a href="mailto:anagauna@amgauna.com.br">anagauna@amgauna.com.br</a>, Wha
 
 <div class="top-left"> 
 <a href="https://github.com/AmgaunaTecnologiaProjetos/github-readme-stats" />
-<img width="380" height="auto" align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=AmgaunaTecnologiaProjetos&layout=compact&langs_count=25&card_width=380&theme=default" /> </a>
+<img width="380" height="auto" align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=AmgaunaTecnologiaProjetos&layout=compact&langs_count=25&card_width=380&theme=default"> </a>
 </div>
 
-![AmgaunaTecnologiaProjetos's GitHub stats]<a href="https://github.com/AmgaunaTecnologiaProjetos/">(https://github-readme-stats.vercel.app/api?username=AmgaunaTecnologiaProjetos&show_icons=true&theme=transparent)</a>
+<a href="https://github.com/AmgaunaTecnologiaProjetos/"><img src="https://github-readme-stats.vercel.app/api?username=AmgaunaTecnologiaProjetos&show_icons=true&theme=transparent"></a>
 
 <div class="top-right">
 <a href="https://github.com/AmgaunaTecnologiaProjetos/">
-<img width="380" height="180" align="top" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?&username=AmgaunaTecnologiaProjetos&langs_count=25&theme=default" /> </a>
+<img width="380" height="180" align="top" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?&username=AmgaunaTecnologiaProjetos&langs_count=25&theme=default"> </a>
 </div>
 
 <picture> 
   <a href="https://github.com/AmgaunaTecnologiaProjetos/">
   <source srcset="https://github-readme-stats.vercel.app/api?username=AmgaunaTecnologiaProjetos&show_icons=true&theme=default" media="(prefers-color-scheme: light)" />
-  <img width="350" height="200" src="https://github-readme-stats.vercel.app/api?username=AmgaunaTecnologiaProjetos&show_icons=true" /> </a>
+  <img width="350" height="200" src="https://github-readme-stats.vercel.app/api?username=AmgaunaTecnologiaProjetos&show_icons=true"> </a>
 </picture>
 
 
