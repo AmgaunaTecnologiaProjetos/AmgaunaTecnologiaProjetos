@@ -1,0 +1,306 @@
+name: Batch check of latexindent.pl
+# PURPOSE:
+#
+# run 
+# 
+#   latexindent --check <file.tex>
+#
+# on each .tex file within test-cases/check-switch-tests
+# for each of
+#
+#   Linux, MacOS, and Windows 
+#
+# and multiple Perl versions within each.
+#
+# Notes: 
+#
+#   (1) this action only runs on develop branch, there's 
+#       no need to run it on the main branch nor on 
+#       experimental feature branches
+#
+#   (2) this action only runs when when at least one of
+#
+#           latexindent.pl
+#           defaultSettings.yaml
+#           LatexIndent/*.pm
+#
+#       have been changed since the last commit
+#
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  check-pm-files-changed:
+    #
+    # check if any key files have changed
+    #
+    # reference: https://github.com/marketplace/actions/changed-files
+    #            https://docs.github.com/en/actions/learn-github-actions/expressions
+    #            https://www.integralist.co.uk/posts/github-actions/#terminology
+    #
+    runs-on: ubuntu-latest
+    outputs:
+      anychanged: ${{ steps.changed-files.outputs.any_changed }}
+    steps:
+      - name: Loading the "base actions/checkout" so as to access latexindent.pl
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 2
+      - name: Check for changed pm files, latexindent.pl, defaultSettings.yaml, batch-check.yaml
+        uses: tj-actions/changed-files@v46
+        id: changed-files
+        with:
+          files: |
+             latexindent.pl
+             defaultSettings.yaml
+             LatexIndent/*.pm
+             .github/workflows/batch-check.yaml
+      - if: ${{ steps.changed-files.outputs.any_changed == 'true' }}
+        name: List all relevant changed files
+        run: |
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            echo "$file has changed since last commit"
+          done
+      - if: ${{ steps.changed-files.outputs.any_changed == 'false' }}
+        name: No perl based files have changed
+        run: |
+            echo ""
+            echo "none of latexindent.pl, defaultSettings.yaml, LatexIndent/*.pm, batch-check.yaml have changed since last commit"
+            echo "no need to run the rest of batch-check.yaml :)"
+            echo ""
+  latexindent-batch-check:
+    needs: check-pm-files-changed
+    if: ${{fromJSON(needs.check-pm-files-changed.outputs.anychanged)}}
+    #
+    # Linux and MacOS
+    #
+    name: ${{ matrix.platform }}, Perl ${{ matrix.perl }}, latexindent.pl --check on test-cases/check-switch-tests/*.tex
+    strategy:
+      matrix:
+        platform: [ubuntu-latest, macos-latest, windows-latest]
+        perl: [ '5.38', '5.36', '5.34' ]
+    runs-on: ${{ matrix.platform }}
+    steps:
+      # checkout github.com/cmhughes/latexindent.pl
+      #
+      # https://github.com/actions/checkout
+      - name: Loading the "base actions/checkout" so as to access latexindent.pl
+        uses: actions/checkout@v5
+      # install Perl
+      #
+      # https://github.com/marketplace/actions/setup-perl-environment
+      - if: ${{ matrix.platform == 'ubuntu-latest' || matrix.platform == 'macos-latest' }}
+        name: installing Perl
+        uses: shogo82148/actions-setup-perl@v1
+        with:
+          perl-version: ${{ matrix.perl }}
+      - if: ${{ matrix.platform == 'windows-latest' }}
+        name: installing Perl
+        uses: shogo82148/actions-setup-perl@v1
+        with:
+          perl-version: ${{ matrix.perl }}
+      - if: ${{ matrix.platform == 'windows-latest' }}
+        name: installing perl modules for latexindent.pl on windows-latest
+        run: |
+          cpanm --force Win32::Unicode::File
+          cpanm --force Win32::API
+      - name: installing perl modules for latexindent.pl 
+        run: |
+          cpanm YAML::Tiny
+          cpanm -f File::HomeDir
+      - if: ${{ matrix.platform == 'ubuntu-latest' || matrix.platform == 'macos-latest' }}
+        name: loop for running latexindent.pl --check test-cases/check-switch-tests/*.tex
+        run: |
+          for file in test-cases/check-switch-tests/*.tex
+          do
+             perl latexindent.pl --check -s $file && echo "latexindent.pl check passed for $file (file unchanged by latexindent.pl)"
+          done
+      - if: ${{ matrix.platform == 'windows-latest' }}
+        name: loop for running latexindent.pl --check test-cases/check-switch-tests/*.tex
+        run: |
+          $files = Get-ChildItem test-cases\check-switch-tests\*tex
+          foreach ($file in $files) {perl latexindent.pl --check -s $file}
+  cjk-windows-exe-test:
+    needs: check-pm-files-changed
+    if: ${{fromJSON(needs.check-pm-files-changed.outputs.anychanged)}}
+    name: 'create Windows executable latexindent.exe using Perl (latest) on Windows'
+    runs-on: 'windows-latest'
+    steps:
+      #
+      # checkout github.com/cmhughes/latexindent.pl
+      # https://github.com/actions/checkout
+      #
+      - name: load the "base actions/checkout" so as to access latexindent.pl
+        uses: actions/checkout@v5
+      #
+      # https://github.com/marketplace/actions/setup-perl-environment
+      #
+      - name: install Perl
+        uses: shogo82148/actions-setup-perl@v1
+        with:
+          perl-version: 'latest'
+      - name: install Perl modules using cpan
+        run: |
+          wmic os get osarchitecture
+          cpanm -f PAR::Packer
+          cpanm YAML::Tiny
+          cpanm File::HomeDir
+          cpanm Unicode::GCString
+          cpanm --force Win32::Unicode::File
+          cpanm --force Win32::API
+      - name: preparations for PAR packer
+        run: |
+          sed -i'.bak' -r 's,eval\s\"use\sUnicode::GCString\"\sif\s\$switches\{GCString\},use Unicode::GCString,' latexindent.pl
+      #
+      # https://metacpan.org/pod/pp
+      # https://github.com/plk/biber/blob/dev/dist/MSWIN64/build.bat
+      #
+      - name: create latexindent.exe using PAR Packer
+        shell: cmd
+        run: |
+          set PAR_VERBATIM=1
+          pp -T -M Win32::Unicode --addfile="defaultSettings.yaml;lib/LatexIndent/defaultSettings.yaml" --cachedeps=scancache --output latexindent.exe latexindent.pl
+      - name: latexindent.exe help
+        run: |
+          ./latexindent.exe --help
+      - name: latexindent.exe replacement test, issue 503
+        # https://github.com/cmhughes/latexindent.pl/issues/503
+        run: |
+          ./latexindent.exe -l test-cases/replacements/issue-503b.yaml -r test-cases/replacements/issue-503a.tex 
+          cat test-cases/replacements/indent.log
+      - name: latexindent.exe one-sentence-per-line test, issue 514
+        # https://github.com/cmhughes/latexindent.pl/issues/514
+        run: |
+          ./latexindent.exe -m -l test-cases/oneSentencePerLine/issue-514.yaml test-cases/oneSentencePerLine/issue-514.tex
+          cat test-cases/oneSentencePerLine/indent.log
+      - name: latexindent.exe cjk test, issue 505
+        # https://github.com/cmhughes/latexindent.pl/issues/505
+        run: |
+          ./latexindent.exe -w test-cases/back-up-tests/新建äö.tex -y 'onlyOneBackUp:1' 
+          cat test-cases/back-up-tests/indent.log
+          ./latexindent.exe test-cases/back-up-tests/新建äö.tex -o=++ -y 'onlyOneBackUp:1'
+          cat test-cases/back-up-tests/indent.log
+          ./latexindent.exe test-cases/back-up-tests/新建äö.tex -o=+-新建 -l="test-cases/back-up-tests/新建äö.yaml" -r -y 'onlyOneBackUp:1'
+          cat test-cases/back-up-tests/indent.log
+          ./latexindent.exe test-cases/back-up-tests/新建äö.tex -g="新建äö.log" -c="D:/新建"
+          cat D:/新建/新建äö.log
+      - name: latexindent.exe -GCString test, issue 531
+        # https://github.com/cmhughes/latexindent.pl/issues/531
+        run: |
+          ./latexindent.exe test-cases/GCString-test/GCString.tex -y="defaultIndent: '    '" -GCString -g="indent.log" -o=++
+          cat test-cases/GCString-test/indent.log
+
+  linux-executable-GCString-test:
+    needs: check-pm-files-changed
+    if: ${{fromJSON(needs.check-pm-files-changed.outputs.anychanged)}}
+    name: 'create Linux executable latexindent'
+    runs-on: 'ubuntu-latest'
+    steps:
+      #
+      # checkout github.com/cmhughes/latexindent.pl
+      # https://github.com/actions/checkout
+      #
+      - name: load the "base actions/checkout" so as to access latexindent.pl
+        uses: actions/checkout@v5
+      #
+      # https://github.com/marketplace/actions/setup-perl-environment
+      #
+      - name: install Perl
+        uses: shogo82148/actions-setup-perl@v1
+        with:
+          perl-version: 'latest'
+      - name: install Perl modules using cpan
+        run: |
+          cpanm -f PAR::Packer
+          cpanm YAML::Tiny
+          cpanm File::HomeDir
+          cpanm Unicode::GCString
+      - name: preparations for PAR packer
+        run: |
+          sed -i'.bak' -r 's,eval\s\"use\sUnicode::GCString\"\sif\s\$switches\{GCString\},use Unicode::GCString,' latexindent.pl
+          PAR_VERBATIM=1
+      #
+      # https://metacpan.org/pod/pp
+      # https://github.com/plk/biber/blob/dev/dist/linux-musl_x86_64/build.sh
+      #
+      - name: create Linux executable latexindent using PAR Packer
+        run: >-
+          pp 
+          --addfile="defaultSettings.yaml;lib/LatexIndent/defaultSettings.yaml"
+          --cachedeps=scancache
+          --output latexindent-linux
+          latexindent.pl
+      - name: latexindent-linux -GCString test, issue 531
+        # https://github.com/cmhughes/latexindent.pl/issues/531
+        run: |
+          ./latexindent-linux test-cases/GCString-test/GCString.tex -y="defaultIndent: '    '" -GCString -g="indent1.log" -o=++
+          cat test-cases/GCString-test/indent1.log
+        continue-on-error: true
+      - name: create Linux executable latexindent using PAR Packer 
+        run: |
+          export PAR_VERBATIM=1
+          pp --addfile="defaultSettings.yaml;lib/LatexIndent/defaultSettings.yaml" --cachedeps=scancache --output latexindent-linux2 latexindent.pl
+      - name: latexindent-linux2 -GCString test, issue 531
+        # https://github.com/cmhughes/latexindent.pl/issues/531
+        run: |
+          ./latexindent-linux2 test-cases/GCString-test/GCString.tex -y="defaultIndent: '    '" -GCString -g="indent2.log" -o=++
+          cat test-cases/GCString-test/indent2.log
+          
+  macos-executable-GCString-test:
+    needs: check-pm-files-changed
+    if: ${{fromJSON(needs.check-pm-files-changed.outputs.anychanged)}}
+    name: 'create MacOS executable latexindent'
+    runs-on: 'macos-latest'
+    steps:
+      #
+      # checkout github.com/cmhughes/latexindent.pl
+      # https://github.com/actions/checkout
+      #
+      - name: load the "base actions/checkout" so as to access latexindent.pl
+        uses: actions/checkout@v5
+      #
+      # https://github.com/marketplace/actions/setup-perl-environment
+      #
+      - name: install Perl
+        uses: shogo82148/actions-setup-perl@v1
+        with:
+          perl-version: 'latest'
+      - name: install Perl modules using cpan
+        run: |
+          cpanm -f PAR::Packer
+          cpanm YAML::Tiny
+          cpanm -f File::HomeDir
+          cpanm Unicode::GCString
+      - name: preparations for PAR packer
+        run: |
+          sed -i'.bak' -r 's,eval\s\"use\sUnicode::GCString\"\sif\s\$switches\{GCString\},use Unicode::GCString,' latexindent.pl
+          PAR_VERBATIM=1
+      #
+      # https://metacpan.org/pod/pp
+      # https://github.com/plk/biber/blob/dev/dist/linux-musl_x86_64/build.sh
+      #
+      - name: create MacOS executable latexindent using PAR Packer
+        run: >-
+          pp 
+          --addfile="defaultSettings.yaml;lib/LatexIndent/defaultSettings.yaml"
+          --cachedeps=scancache
+          --output latexindent-macos
+          latexindent.pl
+      - name: latexindent-macos -GCString test, issue 531
+        # https://github.com/cmhughes/latexindent.pl/issues/531
+        run: |
+          ./latexindent-macos test-cases/GCString-test/GCString.tex -y="defaultIndent: '    '" -GCString -g="indent1.log" -o=++
+          cat test-cases/GCString-test/indent1.log
+        continue-on-error: true
+      - name: create MacOS executable latexindent using PAR Packer 
+        run: |
+          export PAR_VERBATIM=1
+          pp --addfile="defaultSettings.yaml;lib/LatexIndent/defaultSettings.yaml" --cachedeps=scancache --output latexindent-macos2 latexindent.pl
+      - name: latexindent-macos2 -GCString test, issue 531
+        # https://github.com/cmhughes/latexindent.pl/issues/531
+        run: |
+          ./latexindent-macos2 test-cases/GCString-test/GCString.tex -y="defaultIndent: '    '" -GCString -g="indent2.log" -o=++
+          cat test-cases/GCString-test/indent2.log
