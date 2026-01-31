@@ -3,7 +3,7 @@
 <img src="https://img.shields.io/github/followers/AmgaunaTecnologiaProjetos?label=follow&style=social&link=https://www.github.com/AmgaunaTecnologiaProjetos/" 
  title="Follow me" alt="Followers" /> 
 </a> 
-<a href="https://github.com/AmgaunaTecnologiaProjetos">
+<a href="https://github.com/AmgaunaTecnologiaProjetos/">
 <img src="https://komarev.com/ghpvc/?username=AmgaunaTecnologiaProjetos&label=Profile%20views&color=0e75b6&style=flat-square&color=yellow&link=https://www.github.com/AmgaunaTecnologiaProjetos/" title="Profile views" alt="Profile views" /> 
 </a>
 </div>
@@ -86,10 +86,10 @@ Email: <a href="mailto:anagauna@amgauna.com.br">anagauna@amgauna.com.br</a>, Wha
 ### ✨ Github Stats: Total Contributions & Top Languages
 
 <div class="top-center"> 
-<a href="https://github.com/AmgaunaTecnologiaProjetos/github-readme-stats" align="left" />
+<a href="https://github.com/AmgaunaTecnologiaProjetos/">
 <img width="300" height="auto" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?&langs_count=25&username=AmgaunaTecnologiaProjetos&theme=default" /> 
 </a>
-<a href="https://github.com/AmgaunaTecnologiaProjetos/github-readme-stats" align="right" />
+<a href="https://github.com/AmgaunaTecnologiaProjetos/">
 <img width="450" height="auto" src="https://github-readme-streak-stats.herokuapp.com/?user=AmgaunaTecnologiaProjetos&theme=default" /> </a> 
 </div>
 
@@ -98,16 +98,17 @@ Email: <a href="mailto:anagauna@amgauna.com.br">anagauna@amgauna.com.br</a>, Wha
 <img width="380" height="auto" align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=AmgaunaTecnologiaProjetos&layout=compact&langs_count=25&card_width=380&theme=default" /> </a>
 </div>
 
-![AmgaunaTecnologiaProjetos's GitHub stats](https://github-readme-stats.vercel.app/api?username=AmgaunaTecnologiaProjetos&show_icons=true&theme=transparent)
+![AmgaunaTecnologiaProjetos's GitHub stats]<a href="https://github.com/AmgaunaTecnologiaProjetos/">(https://github-readme-stats.vercel.app/api?username=AmgaunaTecnologiaProjetos&show_icons=true&theme=transparent)</a>
 
 <div class="top-right">
-<a href="https://github.com/AmgaunaTecnologiaProjetos/github-readme-stats" />
+<a href="https://github.com/AmgaunaTecnologiaProjetos/">
 <img width="380" height="180" align="top" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?&username=AmgaunaTecnologiaProjetos&langs_count=25&theme=default" /> </a>
 </div>
 
 <picture> 
+  <a href="https://github.com/AmgaunaTecnologiaProjetos/">
   <source srcset="https://github-readme-stats.vercel.app/api?username=AmgaunaTecnologiaProjetos&show_icons=true&theme=default" media="(prefers-color-scheme: light)" />
-  <img width="350" height="200" src="https://github-readme-stats.vercel.app/api?username=AmgaunaTecnologiaProjetos&show_icons=true" />
+  <img width="350" height="200" src="https://github-readme-stats.vercel.app/api?username=AmgaunaTecnologiaProjetos&show_icons=true" /> </a>
 </picture>
 
 
