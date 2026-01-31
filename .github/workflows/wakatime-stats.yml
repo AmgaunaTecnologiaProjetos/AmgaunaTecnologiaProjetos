@@ -9,7 +9,7 @@ jobs:
     name: Update Wakatime Stats Charts
     runs-on: ubuntu-latest
     steps:
-      - uses: AmgaunaTecnologiaProjetos # ou outra ação de sua escolha
+       uses: actions/checkout@v4 
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Opcional, mas recomendado
